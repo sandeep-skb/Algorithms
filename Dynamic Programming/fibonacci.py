@@ -1,3 +1,8 @@
+'''
+This has memoization, tabulation and recursion implementation along with the timer to tell the speed of each 
+algo.
+'''
+
 import time
 def fibo(n):
   if n == 0 or n==1:
