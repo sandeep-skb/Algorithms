@@ -23,7 +23,24 @@ def exchange_tabulate(n):
   
   return lookup[n]
 
+def exchange_mem(n, lookup):
+  if lookup[n] == None:
+    coins = exchange_mem(math.floor(n/2), lookup) + exchange_mem(math.floor(n/3), lookup) + exchange_mem(math.floor(n/4), lookup)
+    if coins > n:
+      lookup[n] = coins
+    else:
+      lookup[n] = n
+  
+  return lookup[n]
+
+
 
 print("Enter the coin you want to exchange:")
 n = int(input())
 print(exchange_tabulate(n))
+lookup = [None]*n+1
+lookup[0] = 0
+lookup[1] = 0
+lookup[2] = 2
+lookup[3] = 3
+print(exchange_mem(n))
