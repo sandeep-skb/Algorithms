@@ -3,9 +3,11 @@ class PriorityQueue:
   def __init__(self):
     self.pq = {}
   
+  #To insert values into the PQ
   def push(self, vtx, val):
     self.pq[vtx] = val
   
+  #To Delete and return the minimum values from the PQ
   def deleteMin(self):
     min_val = min(self.pq.values())
     for key in self.pq.keys():
@@ -14,8 +16,8 @@ class PriorityQueue:
         break
     self.pq.pop(vtx)
     return vtx
-    
   
+  #To check if the PQ is empty
   def IsEmpty(self):
     return (len(self.pq) == 0)
   
