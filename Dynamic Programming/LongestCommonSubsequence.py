@@ -22,6 +22,6 @@ lookup = []
 for x in s1:
   lookup.append([-1]*len(s2))
 
-print(LCS(0, 0, s1, s2, lookup))
-for x in lookup:
-  print(x)
+print("Length of the longest common subsequence is: ", LCS(0, 0, s1, s2, lookup))
+#for x in lookup:
+#  print(x)
